@@ -20,5 +20,7 @@ public class App {
 
         Alien alien = context.getBean("alien", Alien.class);
         System.out.println(alien.getCom());
+
+//        AnnotatedClass annotatedClass =
     }
 }

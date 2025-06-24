@@ -5,14 +5,16 @@ import org.example.Computer;
 import org.example.Desktop;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 
 // If you're going to use this class as a configuration file for spring config, then annotate it with @Configuration annotation
 @Configuration
+
+// Component Stereotype Annotation ---> which is used to make the class, as a spring beans using @Annotations instead of creating a @Bean
+// and configuring everytime
+@ComponentScan("org.example")
+// -- > This annotation is used to scan all the @Component annotated classes, to take care of manipulation
 public class AppConfig {
 
     @Bean // This is used to say spring that this bean has to be created, injected and managed by the spring
